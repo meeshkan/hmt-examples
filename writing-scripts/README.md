@@ -13,9 +13,9 @@ $ meeshkan submit --name "Report scalars" --report-interval 10 report_scalars.py
 Note the option `--report-interval 10`: This means that you want to get notifications
 of your job's progress every ten seconds (not a good idea for a long running job!).
 
-You should have obtained a notification containing a plot looking something like this:
+You should have obtained a Slack notification containing a plot looking something like this:
 
-![Meeshkan notification](./notification.png)
+![Periodical notification](./notification.png)
 
 The variable `y` here is defined via `meeshkan.report_scalar` as follows
 in the submitted script:
@@ -54,3 +54,11 @@ Inside the loop, a new random number is generated and reported to the agent.
 If the value meets the condition set with `meeshkan.add_condition`, a notification will be
 sent.
 
+In my case, my last Slack notification looked like the following:
+
+![Conditional notification](./conditional-notification.png)
+
+Now that you know how scalars are reported via Meeshkan, start adding them
+into your machine learning jobs! If you want a real machine learning example,
+check [this example](https://meeshkan-client.readthedocs.io/en/latest/#pytorch-example)
+using PyTorch.
