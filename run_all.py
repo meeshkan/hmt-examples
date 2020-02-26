@@ -19,7 +19,7 @@ def main():
                     return ret
         finally:
             if mock_process is not None:
-                #mock_process.kill()
+                mock_process.kill()
                 sleep(5)
 
 
