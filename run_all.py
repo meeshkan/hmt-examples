@@ -1,27 +1,37 @@
-import subprocess
 import os
+import subprocess
 import sys
 from time import sleep
 
-SAMPLES = ['callback_sample', 'opbank']
-def main():
-    mock_process = None
-    for sample in SAMPLES:
-        try:
-            samples_path = os.path.join('.', sample)
-            if os.path.isdir(samples_path):
-                mock_process = subprocess.Popen(["meeshkan", "mock"], cwd=samples_path)
-                sleep(5)
-                my_env = os.environ.copy()
-                my_env["PYTHONPATH"] = '../'
-                ret = subprocess.call(["pytest"], cwd=samples_path, env=my_env)
-                if ret != 0:
-                    return ret
-        finally:
-            if mock_process is not None:
-                mock_process.kill()
-                sleep(5)
+import requests
 
+SAMPLES = ['callbacks_sample', 'opbank']
+
+
+def wait_mock_server():
+    for i in range(5):
+        sleep(0.5)
+        try:
+            requests.delete("http://localhost:8888/admin/storage")
+            return
+        except:
+            pass
+
+
+def main():
+    for sample in SAMPLES:
+        samples_path = os.path.join('.', sample)
+        with subprocess.Popen(["meeshkan", "mock"], cwd=samples_path) as mock_process:
+            try:
+                if os.path.isdir(samples_path):
+                    wait_mock_server()
+                    my_env = os.environ.copy()
+                    my_env["PYTHONPATH"] = '../'
+                    ret = subprocess.call(["pytest"], cwd=samples_path, env=my_env)
+                    if ret != 0:
+                        return ret
+            finally:
+                mock_process.kill()
 
     return 0
 
