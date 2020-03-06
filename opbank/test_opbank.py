@@ -32,7 +32,7 @@ def test_opbank():
 
     accounts = client.get_accounts()
     print('Account list after confirmation: {}'.format(accounts))
-    assert 2210.81 == accounts[payer_iban]['balance']
+    assert 2220.81 == accounts[payer_iban]['balance']
     assert 5 == accounts[receiver_iban]['balance']
 
 
