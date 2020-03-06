@@ -1,7 +1,7 @@
-from .opbank_client import OPBankClient
+from opbank.opbank_client import OPBankClient
 
 client = OPBankClient()
-client.API_URL = 'http://localhost:8000/https://sandbox.apis.op-palvelut.fi/'
+client.API_URL = 'http://localhost:8002/https://sandbox.apis.op-palvelut.fi/'
 
 payer_iban = 'FI8359986950002741'
 receiver_iban = 'FI4859986920215738'

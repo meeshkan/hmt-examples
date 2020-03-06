@@ -1,2 +1,2 @@
 requests
-https://github.com/meeshkan/meeshkan.git#egg=meeshkan
+git+https://github.com/meeshkan/meeshkan.git#egg=meeshkan
