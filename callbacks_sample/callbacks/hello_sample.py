@@ -1,4 +1,4 @@
-from meeshkan.server.server.callbacks import callback
+from meeshkan.serve.mock.callbacks import callback
 
 
 @callback('api.com', 'get', '/hello', format='plain')

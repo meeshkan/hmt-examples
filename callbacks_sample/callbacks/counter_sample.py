@@ -1,4 +1,4 @@
-from meeshkan.server.server.callbacks import callback
+from meeshkan.serve.mock.callbacks import callback
 
 @callback('api.com', 'post', '/counter')
 def counter_callback(request_body, response_body, storage):
