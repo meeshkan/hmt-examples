@@ -21,9 +21,7 @@ def wait_mock_server():
 def main():
     for sample in SAMPLES:
         samples_path = os.path.join('.', sample)
-        process_args = ['meeshkan', 'mock']
-        if sample == 'callbacks_sample':
-            process_args.extend(['--callback-dir', 'callbacks'])
+        process_args = ['meeshkan', 'mock', '--callback-dir', 'callbacks']
         with subprocess.Popen(process_args, cwd=samples_path) as mock_process:
             try:
                 if os.path.isdir(samples_path):
