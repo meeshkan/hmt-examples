@@ -9,7 +9,7 @@ workflows:
 jobs: # A basic unit of work in a run
   test-3.6: &test-template
     # directory where steps are run
-    working_directory: ~/meeshkan-examples
+    working_directory: ~/mem-examples
     docker: # run the steps with Docker
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
       - image: circleci/python:3.6.4-stretch
