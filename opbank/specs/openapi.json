@@ -1,0 +1,2242 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API title",
+    "version": "1.0",
+    "description": "API description"
+  },
+  "paths": {
+    "/accounts/v3/accounts": {
+      "summary": "Path summary",
+      "description": "Path description",
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Response description",
+            "headers": {
+              "Date": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "Tue, 28 Apr 2020 07:16:21 GMT"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "keep-alive"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "W/\"fa8-o6bxJ9GZuqBxBG112Odm2qBeutA\""
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "Vary": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "Accept-Encoding"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "proxy-revalidate"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "Proxy-Connection": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "Keep-Alive"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "Content-Encoding": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "gzip"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "Age": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "0"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "Set-Cookie": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "DY20171101140758=rd1o00000000000000000000ffff0af85414o9001; path=/; Httponly; Secure, TS01a4f296=01ee6de992573e0a525c95f36535672a8c316091f01c91c28ee9c181b1c547fa773197fa3160dffda467d28a58fe4f7603b442637981592aee4036776bb503701370929f61; Path=/"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "chunked"
+                      ],
+                      "type": "string"
+                    }
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "required": [
+                        "accounts",
+                        "_links"
+                      ],
+                      "properties": {
+                        "accounts": {
+                          "items": [
+                            {
+                              "required": [
+                                "accountId",
+                                "identifier",
+                                "identifierScheme",
+                                "nickname",
+                                "name",
+                                "balance",
+                                "currency",
+                                "servicerScheme",
+                                "servicerIdentifier",
+                                "_links"
+                              ],
+                              "properties": {
+                                "accountId": {
+                                  "enum": [
+                                    "1UF-Jttwvjzzvvr826EPArAuHFXDt7io0gbCh2ddauQ.s3xFv5EW-Ky-iXM_0LyqtQ.2dYBuHKP1281pZjFhF5nqw"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifier": {
+                                  "enum": [
+                                    "FI2350009421535899"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifierScheme": {
+                                  "enum": [
+                                    "IBAN"
+                                  ],
+                                  "type": "string"
+                                },
+                                "nickname": {
+                                  "enum": [
+                                    ""
+                                  ],
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "enum": [
+                                    "K\u00c4YTT\u00d6TILI"
+                                  ],
+                                  "type": "string"
+                                },
+                                "balance": {
+                                  "enum": [
+                                    0
+                                  ],
+                                  "type": "integer"
+                                },
+                                "currency": {
+                                  "enum": [
+                                    "EUR"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerScheme": {
+                                  "enum": [
+                                    "BIC"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerIdentifier": {
+                                  "enum": [
+                                    "OKOYFIHH"
+                                  ],
+                                  "type": "string"
+                                },
+                                "_links": {
+                                  "required": [
+                                    "self",
+                                    "transactions"
+                                  ],
+                                  "properties": {
+                                    "self": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/1UF-Jttwvjzzvvr826EPArAuHFXDt7io0gbCh2ddauQ.s3xFv5EW-Ky-iXM_0LyqtQ.2dYBuHKP1281pZjFhF5nqw"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    },
+                                    "transactions": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/1UF-Jttwvjzzvvr826EPArAuHFXDt7io0gbCh2ddauQ.s3xFv5EW-Ky-iXM_0LyqtQ.2dYBuHKP1281pZjFhF5nqw/transactions"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            {
+                              "required": [
+                                "accountId",
+                                "identifier",
+                                "identifierScheme",
+                                "nickname",
+                                "name",
+                                "balance",
+                                "currency",
+                                "servicerScheme",
+                                "servicerIdentifier",
+                                "_links"
+                              ],
+                              "properties": {
+                                "accountId": {
+                                  "enum": [
+                                    "a5se5WE8j201Hsf0yG14xuxswE2Q_Nom-WvuNb-FuGk.vfhhYXXmoHxkKNfpbNA0rw.EXm96va3tA9NRAwYjcmtmQ"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifier": {
+                                  "enum": [
+                                    "FI3959986920207073"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifierScheme": {
+                                  "enum": [
+                                    "IBAN"
+                                  ],
+                                  "type": "string"
+                                },
+                                "nickname": {
+                                  "enum": [
+                                    ""
+                                  ],
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "enum": [
+                                    "K\u00c4YTT\u00d6TILI"
+                                  ],
+                                  "type": "string"
+                                },
+                                "balance": {
+                                  "enum": [
+                                    2215.81
+                                  ],
+                                  "type": "number"
+                                },
+                                "currency": {
+                                  "enum": [
+                                    "EUR"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerScheme": {
+                                  "enum": [
+                                    "BIC"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerIdentifier": {
+                                  "enum": [
+                                    "OKOYFIHH"
+                                  ],
+                                  "type": "string"
+                                },
+                                "_links": {
+                                  "required": [
+                                    "self",
+                                    "transactions"
+                                  ],
+                                  "properties": {
+                                    "self": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/a5se5WE8j201Hsf0yG14xuxswE2Q_Nom-WvuNb-FuGk.vfhhYXXmoHxkKNfpbNA0rw.EXm96va3tA9NRAwYjcmtmQ"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    },
+                                    "transactions": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/a5se5WE8j201Hsf0yG14xuxswE2Q_Nom-WvuNb-FuGk.vfhhYXXmoHxkKNfpbNA0rw.EXm96va3tA9NRAwYjcmtmQ/transactions"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            {
+                              "required": [
+                                "accountId",
+                                "identifier",
+                                "identifierScheme",
+                                "nickname",
+                                "name",
+                                "balance",
+                                "currency",
+                                "servicerScheme",
+                                "servicerIdentifier",
+                                "_links"
+                              ],
+                              "properties": {
+                                "accountId": {
+                                  "enum": [
+                                    "5EBT6bvB2l5fsOtSFR3w_FFRIPrQEVafyaTRwUpqswg.zdwsTIgBJWlPGK4048nOwg.LljTTJTXlzUvd49tONNjAQ"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifier": {
+                                  "enum": [
+                                    "FI8958400720010290"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifierScheme": {
+                                  "enum": [
+                                    "IBAN"
+                                  ],
+                                  "type": "string"
+                                },
+                                "nickname": {
+                                  "enum": [
+                                    ""
+                                  ],
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "enum": [
+                                    "K\u00c4YTT\u00d6TILI"
+                                  ],
+                                  "type": "string"
+                                },
+                                "balance": {
+                                  "enum": [
+                                    10287.84
+                                  ],
+                                  "type": "number"
+                                },
+                                "currency": {
+                                  "enum": [
+                                    "EUR"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerScheme": {
+                                  "enum": [
+                                    "BIC"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerIdentifier": {
+                                  "enum": [
+                                    "OKOYFIHH"
+                                  ],
+                                  "type": "string"
+                                },
+                                "_links": {
+                                  "required": [
+                                    "self",
+                                    "transactions"
+                                  ],
+                                  "properties": {
+                                    "self": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/5EBT6bvB2l5fsOtSFR3w_FFRIPrQEVafyaTRwUpqswg.zdwsTIgBJWlPGK4048nOwg.LljTTJTXlzUvd49tONNjAQ"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    },
+                                    "transactions": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/5EBT6bvB2l5fsOtSFR3w_FFRIPrQEVafyaTRwUpqswg.zdwsTIgBJWlPGK4048nOwg.LljTTJTXlzUvd49tONNjAQ/transactions"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            {
+                              "required": [
+                                "accountId",
+                                "identifier",
+                                "identifierScheme",
+                                "nickname",
+                                "name",
+                                "balance",
+                                "currency",
+                                "servicerScheme",
+                                "servicerIdentifier",
+                                "_links"
+                              ],
+                              "properties": {
+                                "accountId": {
+                                  "enum": [
+                                    "d5Reu66-8nJZOD14enPUouNa9cRt9AJPdYeKmjaGN34.y-OVkLtqwhuicDG3OZp57A.MuGsMxzt-I7sPJ1l97dUWQ"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifier": {
+                                  "enum": [
+                                    "FI2450009421535881"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifierScheme": {
+                                  "enum": [
+                                    "IBAN"
+                                  ],
+                                  "type": "string"
+                                },
+                                "nickname": {
+                                  "enum": [
+                                    ""
+                                  ],
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "enum": [
+                                    "K\u00c4YTT\u00d6TILI"
+                                  ],
+                                  "type": "string"
+                                },
+                                "balance": {
+                                  "enum": [
+                                    0
+                                  ],
+                                  "type": "integer"
+                                },
+                                "currency": {
+                                  "enum": [
+                                    "EUR"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerScheme": {
+                                  "enum": [
+                                    "BIC"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerIdentifier": {
+                                  "enum": [
+                                    "OKOYFIHH"
+                                  ],
+                                  "type": "string"
+                                },
+                                "_links": {
+                                  "required": [
+                                    "self",
+                                    "transactions"
+                                  ],
+                                  "properties": {
+                                    "self": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/d5Reu66-8nJZOD14enPUouNa9cRt9AJPdYeKmjaGN34.y-OVkLtqwhuicDG3OZp57A.MuGsMxzt-I7sPJ1l97dUWQ"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    },
+                                    "transactions": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/d5Reu66-8nJZOD14enPUouNa9cRt9AJPdYeKmjaGN34.y-OVkLtqwhuicDG3OZp57A.MuGsMxzt-I7sPJ1l97dUWQ/transactions"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            {
+                              "required": [
+                                "accountId",
+                                "identifier",
+                                "identifierScheme",
+                                "nickname",
+                                "name",
+                                "balance",
+                                "currency",
+                                "servicerScheme",
+                                "servicerIdentifier",
+                                "_links"
+                              ],
+                              "properties": {
+                                "accountId": {
+                                  "enum": [
+                                    "vEvPub7KyH0ykMWv-6tLyabdGkBRPq6mgwE6cSxUBLY.6sBInMNYkQxkooDfl1EHng.VVKd8VX_hvw2VvuAvRtX_w"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifier": {
+                                  "enum": [
+                                    "FI8058400767000550"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifierScheme": {
+                                  "enum": [
+                                    "IBAN"
+                                  ],
+                                  "type": "string"
+                                },
+                                "nickname": {
+                                  "enum": [
+                                    ""
+                                  ],
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "enum": [
+                                    "K\u00c4YTT\u00d6TILI"
+                                  ],
+                                  "type": "string"
+                                },
+                                "balance": {
+                                  "enum": [
+                                    0
+                                  ],
+                                  "type": "integer"
+                                },
+                                "currency": {
+                                  "enum": [
+                                    "EUR"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerScheme": {
+                                  "enum": [
+                                    "BIC"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerIdentifier": {
+                                  "enum": [
+                                    "OKOYFIHH"
+                                  ],
+                                  "type": "string"
+                                },
+                                "_links": {
+                                  "required": [
+                                    "self",
+                                    "transactions"
+                                  ],
+                                  "properties": {
+                                    "self": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/vEvPub7KyH0ykMWv-6tLyabdGkBRPq6mgwE6cSxUBLY.6sBInMNYkQxkooDfl1EHng.VVKd8VX_hvw2VvuAvRtX_w"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    },
+                                    "transactions": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/vEvPub7KyH0ykMWv-6tLyabdGkBRPq6mgwE6cSxUBLY.6sBInMNYkQxkooDfl1EHng.VVKd8VX_hvw2VvuAvRtX_w/transactions"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            {
+                              "required": [
+                                "accountId",
+                                "identifier",
+                                "identifierScheme",
+                                "nickname",
+                                "name",
+                                "balance",
+                                "currency",
+                                "servicerScheme",
+                                "servicerIdentifier",
+                                "_links"
+                              ],
+                              "properties": {
+                                "accountId": {
+                                  "enum": [
+                                    "NkvX9k6HaMkTtAT0n-Fy9Q9xq_BZFNm0jK7c99bzLd4.rdw323HZbAxUR8R9krkabQ.q6YZzuzokA9Jg7W6yC2JHg"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifier": {
+                                  "enum": [
+                                    "FI8859986967004714"
+                                  ],
+                                  "type": "string"
+                                },
+                                "identifierScheme": {
+                                  "enum": [
+                                    "IBAN"
+                                  ],
+                                  "type": "string"
+                                },
+                                "nickname": {
+                                  "enum": [
+                                    ""
+                                  ],
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "enum": [
+                                    "K\u00c4YTT\u00d6TILI"
+                                  ],
+                                  "type": "string"
+                                },
+                                "balance": {
+                                  "enum": [
+                                    12852.51
+                                  ],
+                                  "type": "number"
+                                },
+                                "currency": {
+                                  "enum": [
+                                    "EUR"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerScheme": {
+                                  "enum": [
+                                    "BIC"
+                                  ],
+                                  "type": "string"
+                                },
+                                "servicerIdentifier": {
+                                  "enum": [
+                                    "OKOYFIHH"
+                                  ],
+                                  "type": "string"
+                                },
+                                "_links": {
+                                  "required": [
+                                    "self",
+                                    "transactions"
+                                  ],
+                                  "properties": {
+                                    "self": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/NkvX9k6HaMkTtAT0n-Fy9Q9xq_BZFNm0jK7c99bzLd4.rdw323HZbAxUR8R9krkabQ.q6YZzuzokA9Jg7W6yC2JHg"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    },
+                                    "transactions": {
+                                      "required": [
+                                        "href"
+                                      ],
+                                      "properties": {
+                                        "href": {
+                                          "enum": [
+                                            "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/NkvX9k6HaMkTtAT0n-Fy9Q9xq_BZFNm0jK7c99bzLd4.rdw323HZbAxUR8R9krkabQ.q6YZzuzokA9Jg7W6yC2JHg/transactions"
+                                          ],
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          ],
+                          "type": "array"
+                        },
+                        "_links": {
+                          "required": [
+                            "self"
+                          ],
+                          "properties": {
+                            "self": {
+                              "required": [
+                                "href"
+                              ],
+                              "properties": {
+                                "href": {
+                                  "enum": [
+                                    "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts"
+                                  ],
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "oneOf": [
+                        {
+                          "required": [
+                            "accounts",
+                            "_links"
+                          ],
+                          "properties": {
+                            "accounts": {
+                              "items": [
+                                {
+                                  "required": [
+                                    "accountId",
+                                    "identifier",
+                                    "identifierScheme",
+                                    "nickname",
+                                    "name",
+                                    "balance",
+                                    "currency",
+                                    "servicerScheme",
+                                    "servicerIdentifier",
+                                    "_links"
+                                  ],
+                                  "properties": {
+                                    "accountId": {
+                                      "enum": [
+                                        "t9s2wmYnu8XrYa82WskKn1MV1lWInYY98cjGTltVoJg.0qKsNl7lUaFwx1GmIjDxjg.21r9Ci0JZvE_SxB9H67RXw"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifier": {
+                                      "enum": [
+                                        "FI2350009421535899"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifierScheme": {
+                                      "enum": [
+                                        "IBAN"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "nickname": {
+                                      "enum": [
+                                        ""
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "enum": [
+                                        "K\u00c4YTT\u00d6TILI"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "balance": {
+                                      "enum": [
+                                        0
+                                      ],
+                                      "type": "integer"
+                                    },
+                                    "currency": {
+                                      "enum": [
+                                        "EUR"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerScheme": {
+                                      "enum": [
+                                        "BIC"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerIdentifier": {
+                                      "enum": [
+                                        "OKOYFIHH"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "_links": {
+                                      "required": [
+                                        "self",
+                                        "transactions"
+                                      ],
+                                      "properties": {
+                                        "self": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/t9s2wmYnu8XrYa82WskKn1MV1lWInYY98cjGTltVoJg.0qKsNl7lUaFwx1GmIjDxjg.21r9Ci0JZvE_SxB9H67RXw"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        },
+                                        "transactions": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/t9s2wmYnu8XrYa82WskKn1MV1lWInYY98cjGTltVoJg.0qKsNl7lUaFwx1GmIjDxjg.21r9Ci0JZvE_SxB9H67RXw/transactions"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                {
+                                  "required": [
+                                    "accountId",
+                                    "identifier",
+                                    "identifierScheme",
+                                    "nickname",
+                                    "name",
+                                    "balance",
+                                    "currency",
+                                    "servicerScheme",
+                                    "servicerIdentifier",
+                                    "_links"
+                                  ],
+                                  "properties": {
+                                    "accountId": {
+                                      "enum": [
+                                        "aOH3PB-9bypQX89x0HfqvCvFMONhWp2UNjsOaUos_no.HxOoxwp00JNyljKNrR0B9A.YAQ8zpBdZ_xBxhK_Pr91Vw"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifier": {
+                                      "enum": [
+                                        "FI3959986920207073"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifierScheme": {
+                                      "enum": [
+                                        "IBAN"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "nickname": {
+                                      "enum": [
+                                        ""
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "enum": [
+                                        "K\u00c4YTT\u00d6TILI"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "balance": {
+                                      "enum": [
+                                        2215.81
+                                      ],
+                                      "type": "number"
+                                    },
+                                    "currency": {
+                                      "enum": [
+                                        "EUR"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerScheme": {
+                                      "enum": [
+                                        "BIC"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerIdentifier": {
+                                      "enum": [
+                                        "OKOYFIHH"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "_links": {
+                                      "required": [
+                                        "self",
+                                        "transactions"
+                                      ],
+                                      "properties": {
+                                        "self": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/aOH3PB-9bypQX89x0HfqvCvFMONhWp2UNjsOaUos_no.HxOoxwp00JNyljKNrR0B9A.YAQ8zpBdZ_xBxhK_Pr91Vw"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        },
+                                        "transactions": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/aOH3PB-9bypQX89x0HfqvCvFMONhWp2UNjsOaUos_no.HxOoxwp00JNyljKNrR0B9A.YAQ8zpBdZ_xBxhK_Pr91Vw/transactions"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                {
+                                  "required": [
+                                    "accountId",
+                                    "identifier",
+                                    "identifierScheme",
+                                    "nickname",
+                                    "name",
+                                    "balance",
+                                    "currency",
+                                    "servicerScheme",
+                                    "servicerIdentifier",
+                                    "_links"
+                                  ],
+                                  "properties": {
+                                    "accountId": {
+                                      "enum": [
+                                        "aQ0it_THyhmekPP9lxDZEkE7oqa51Hz0CjgAy8r86OE.-FfXNFAoIh2x2x3BcRehyQ.ypGlBXme5-LEygfVGcF-OQ"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifier": {
+                                      "enum": [
+                                        "FI8958400720010290"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifierScheme": {
+                                      "enum": [
+                                        "IBAN"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "nickname": {
+                                      "enum": [
+                                        ""
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "enum": [
+                                        "K\u00c4YTT\u00d6TILI"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "balance": {
+                                      "enum": [
+                                        10287.84
+                                      ],
+                                      "type": "number"
+                                    },
+                                    "currency": {
+                                      "enum": [
+                                        "EUR"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerScheme": {
+                                      "enum": [
+                                        "BIC"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerIdentifier": {
+                                      "enum": [
+                                        "OKOYFIHH"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "_links": {
+                                      "required": [
+                                        "self",
+                                        "transactions"
+                                      ],
+                                      "properties": {
+                                        "self": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/aQ0it_THyhmekPP9lxDZEkE7oqa51Hz0CjgAy8r86OE.-FfXNFAoIh2x2x3BcRehyQ.ypGlBXme5-LEygfVGcF-OQ"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        },
+                                        "transactions": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/aQ0it_THyhmekPP9lxDZEkE7oqa51Hz0CjgAy8r86OE.-FfXNFAoIh2x2x3BcRehyQ.ypGlBXme5-LEygfVGcF-OQ/transactions"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                {
+                                  "required": [
+                                    "accountId",
+                                    "identifier",
+                                    "identifierScheme",
+                                    "nickname",
+                                    "name",
+                                    "balance",
+                                    "currency",
+                                    "servicerScheme",
+                                    "servicerIdentifier",
+                                    "_links"
+                                  ],
+                                  "properties": {
+                                    "accountId": {
+                                      "enum": [
+                                        "1st1Le3jEaapUxl7QQjBeuqdQOcSQcX4pXMZnE6P2gY.kIy_UNpyccDZ9G7mO_BL_w.dClYg79f_3WF2sBNee-I2g"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifier": {
+                                      "enum": [
+                                        "FI2450009421535881"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifierScheme": {
+                                      "enum": [
+                                        "IBAN"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "nickname": {
+                                      "enum": [
+                                        ""
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "enum": [
+                                        "K\u00c4YTT\u00d6TILI"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "balance": {
+                                      "enum": [
+                                        0
+                                      ],
+                                      "type": "integer"
+                                    },
+                                    "currency": {
+                                      "enum": [
+                                        "EUR"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerScheme": {
+                                      "enum": [
+                                        "BIC"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerIdentifier": {
+                                      "enum": [
+                                        "OKOYFIHH"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "_links": {
+                                      "required": [
+                                        "self",
+                                        "transactions"
+                                      ],
+                                      "properties": {
+                                        "self": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/1st1Le3jEaapUxl7QQjBeuqdQOcSQcX4pXMZnE6P2gY.kIy_UNpyccDZ9G7mO_BL_w.dClYg79f_3WF2sBNee-I2g"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        },
+                                        "transactions": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/1st1Le3jEaapUxl7QQjBeuqdQOcSQcX4pXMZnE6P2gY.kIy_UNpyccDZ9G7mO_BL_w.dClYg79f_3WF2sBNee-I2g/transactions"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                {
+                                  "required": [
+                                    "accountId",
+                                    "identifier",
+                                    "identifierScheme",
+                                    "nickname",
+                                    "name",
+                                    "balance",
+                                    "currency",
+                                    "servicerScheme",
+                                    "servicerIdentifier",
+                                    "_links"
+                                  ],
+                                  "properties": {
+                                    "accountId": {
+                                      "enum": [
+                                        "_egCQxBhn8Xnf6XZh8swXbmD7SD9y-4SrImkfu86feY.oo-sNCt4btxk1Wd6bMMj4w.TOaODkEKGfuCTRu5MgwsLQ"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifier": {
+                                      "enum": [
+                                        "FI8058400767000550"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifierScheme": {
+                                      "enum": [
+                                        "IBAN"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "nickname": {
+                                      "enum": [
+                                        ""
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "enum": [
+                                        "K\u00c4YTT\u00d6TILI"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "balance": {
+                                      "enum": [
+                                        0
+                                      ],
+                                      "type": "integer"
+                                    },
+                                    "currency": {
+                                      "enum": [
+                                        "EUR"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerScheme": {
+                                      "enum": [
+                                        "BIC"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerIdentifier": {
+                                      "enum": [
+                                        "OKOYFIHH"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "_links": {
+                                      "required": [
+                                        "self",
+                                        "transactions"
+                                      ],
+                                      "properties": {
+                                        "self": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/_egCQxBhn8Xnf6XZh8swXbmD7SD9y-4SrImkfu86feY.oo-sNCt4btxk1Wd6bMMj4w.TOaODkEKGfuCTRu5MgwsLQ"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        },
+                                        "transactions": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/_egCQxBhn8Xnf6XZh8swXbmD7SD9y-4SrImkfu86feY.oo-sNCt4btxk1Wd6bMMj4w.TOaODkEKGfuCTRu5MgwsLQ/transactions"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                {
+                                  "required": [
+                                    "accountId",
+                                    "identifier",
+                                    "identifierScheme",
+                                    "nickname",
+                                    "name",
+                                    "balance",
+                                    "currency",
+                                    "servicerScheme",
+                                    "servicerIdentifier",
+                                    "_links"
+                                  ],
+                                  "properties": {
+                                    "accountId": {
+                                      "enum": [
+                                        "Gt5ol2XuTxdmtjf-7mWdBO0bhZmpbD-G9BdE88XWwH8.3Yax_a5CoD1TJ-L5kBOlGg.NheO4aW1hlvsAAGiErdh8g"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifier": {
+                                      "enum": [
+                                        "FI8859986967004714"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "identifierScheme": {
+                                      "enum": [
+                                        "IBAN"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "nickname": {
+                                      "enum": [
+                                        ""
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "enum": [
+                                        "K\u00c4YTT\u00d6TILI"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "balance": {
+                                      "enum": [
+                                        12852.51
+                                      ],
+                                      "type": "number"
+                                    },
+                                    "currency": {
+                                      "enum": [
+                                        "EUR"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerScheme": {
+                                      "enum": [
+                                        "BIC"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "servicerIdentifier": {
+                                      "enum": [
+                                        "OKOYFIHH"
+                                      ],
+                                      "type": "string"
+                                    },
+                                    "_links": {
+                                      "required": [
+                                        "self",
+                                        "transactions"
+                                      ],
+                                      "properties": {
+                                        "self": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/Gt5ol2XuTxdmtjf-7mWdBO0bhZmpbD-G9BdE88XWwH8.3Yax_a5CoD1TJ-L5kBOlGg.NheO4aW1hlvsAAGiErdh8g"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        },
+                                        "transactions": {
+                                          "required": [
+                                            "href"
+                                          ],
+                                          "properties": {
+                                            "href": {
+                                              "enum": [
+                                                "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts/Gt5ol2XuTxdmtjf-7mWdBO0bhZmpbD-G9BdE88XWwH8.3Yax_a5CoD1TJ-L5kBOlGg.NheO4aW1hlvsAAGiErdh8g/transactions"
+                                              ],
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        }
+                                      },
+                                      "type": "object"
+                                    }
+                                  },
+                                  "type": "object"
+                                }
+                              ],
+                              "type": "array"
+                            },
+                            "_links": {
+                              "required": [
+                                "self"
+                              ],
+                              "properties": {
+                                "self": {
+                                  "required": [
+                                    "href"
+                                  ],
+                                  "properties": {
+                                    "href": {
+                                      "enum": [
+                                        "https://sandbox.apis.op-palvelut.fi/accounts/v3/accounts"
+                                      ],
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "links": {}
+          }
+        },
+        "summary": "Operation summary",
+        "description": "Operation description",
+        "operationId": "id",
+        "parameters": [
+          {
+            "name": "Accept-Encoding",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "gzip, deflate"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "enum": [
+                    "gzip, deflate"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "*/*"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "enum": [
+                    "*/*"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Connection",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "keep-alive"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "enum": [
+                    "keep-alive"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "sandbox.apis.op-palvelut.fi"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "enum": [
+                    "sandbox.apis.op-palvelut.fi"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "User-Agent",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "python-requests/2.23.0"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "enum": [
+                    "python-requests/2.23.0"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "Bearer 6c18c234b1b18b1d97c7043e2e41135c293d0da9"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "enum": [
+                    "Bearer 6c18c234b1b18b1d97c7043e2e41135c293d0da9"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "ZoStul8nNuwq1SYCzSrLcO1wAj4Tyf7x"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "enum": [
+                    "ZoStul8nNuwq1SYCzSrLcO1wAj4Tyf7x"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/v1/payments/initiate": {
+      "summary": "Path summary",
+      "description": "Path description",
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Response description",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "required": [
+                        "amount",
+                        "subject",
+                        "currency",
+                        "payerIban",
+                        "valueDate",
+                        "receiverBic",
+                        "receiverIban",
+                        "receiverName",
+                        "paymentId"
+                      ],
+                      "properties": {
+                        "amount": {
+                          "enum": [
+                            5
+                          ],
+                          "type": "integer"
+                        },
+                        "subject": {
+                          "enum": [
+                            "Client Test"
+                          ],
+                          "type": "string"
+                        },
+                        "currency": {
+                          "enum": [
+                            "EUR"
+                          ],
+                          "type": "string"
+                        },
+                        "payerIban": {
+                          "enum": [
+                            "FI8359986950002741"
+                          ],
+                          "type": "string"
+                        },
+                        "valueDate": {
+                          "enum": [
+                            "2020-01-27T22:59:34Z"
+                          ],
+                          "type": "string"
+                        },
+                        "receiverBic": {
+                          "enum": [
+                            "string"
+                          ],
+                          "type": "string"
+                        },
+                        "receiverIban": {
+                          "enum": [
+                            "FI4859986920215738"
+                          ],
+                          "type": "string"
+                        },
+                        "receiverName": {
+                          "enum": [
+                            "string"
+                          ],
+                          "type": "string"
+                        },
+                        "paymentId": {
+                          "enum": [
+                            "28291040-8920-11ea-9b38-adbba4c22bc0"
+                          ],
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "links": {}
+          }
+        },
+        "summary": "Operation summary",
+        "description": "Operation description",
+        "operationId": "id",
+        "parameters": [
+          {
+            "name": "Accept-Encoding",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "gzip, deflate"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "application/json"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Content-Length",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "219"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "*/*"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "sandbox.apis.op-palvelut.fi"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "User-Agent",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "python-requests/2.23.0"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Connection",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "keep-alive"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "ZoStul8nNuwq1SYCzSrLcO1wAj4Tyf7x"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "x-authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "6c18c234b1b18b1d97c7043e2e41135c293d0da9"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "required": [
+                      "amount",
+                      "subject",
+                      "currency",
+                      "payerIban",
+                      "valueDate",
+                      "receiverBic",
+                      "receiverIban",
+                      "receiverName"
+                    ],
+                    "properties": {
+                      "amount": {
+                        "enum": [
+                          5
+                        ],
+                        "type": "integer"
+                      },
+                      "subject": {
+                        "enum": [
+                          "Client Test"
+                        ],
+                        "type": "string"
+                      },
+                      "currency": {
+                        "enum": [
+                          "EUR"
+                        ],
+                        "type": "string"
+                      },
+                      "payerIban": {
+                        "enum": [
+                          "FI8359986950002741"
+                        ],
+                        "type": "string"
+                      },
+                      "valueDate": {
+                        "enum": [
+                          "2020-01-27T22:59:34Z"
+                        ],
+                        "type": "string"
+                      },
+                      "receiverBic": {
+                        "enum": [
+                          "string"
+                        ],
+                        "type": "string"
+                      },
+                      "receiverIban": {
+                        "enum": [
+                          "FI4859986920215738"
+                        ],
+                        "type": "string"
+                      },
+                      "receiverName": {
+                        "enum": [
+                          "string"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              }
+            }
+          },
+          "description": "Response description"
+        }
+      }
+    },
+    "/v1/payments/confirm": {
+      "summary": "Path summary",
+      "description": "Path description",
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Response description",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "required": [
+                        "amount",
+                        "subject",
+                        "currency",
+                        "payerIban",
+                        "valueDate",
+                        "receiverBic",
+                        "receiverIban",
+                        "receiverName",
+                        "paymentId"
+                      ],
+                      "properties": {
+                        "amount": {
+                          "enum": [
+                            5
+                          ],
+                          "type": "integer"
+                        },
+                        "subject": {
+                          "enum": [
+                            "Client Test"
+                          ],
+                          "type": "string"
+                        },
+                        "currency": {
+                          "enum": [
+                            "EUR"
+                          ],
+                          "type": "string"
+                        },
+                        "payerIban": {
+                          "enum": [
+                            "FI8359986950002741"
+                          ],
+                          "type": "string"
+                        },
+                        "valueDate": {
+                          "enum": [
+                            "2020-01-27T22:59:34Z"
+                          ],
+                          "type": "string"
+                        },
+                        "receiverBic": {
+                          "enum": [
+                            "string"
+                          ],
+                          "type": "string"
+                        },
+                        "receiverIban": {
+                          "enum": [
+                            "FI4859986920215738"
+                          ],
+                          "type": "string"
+                        },
+                        "receiverName": {
+                          "enum": [
+                            "string"
+                          ],
+                          "type": "string"
+                        },
+                        "paymentId": {
+                          "enum": [
+                            "28291040-8920-11ea-9b38-adbba4c22bc0"
+                          ],
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "links": {}
+          }
+        },
+        "summary": "Operation summary",
+        "description": "Operation description",
+        "operationId": "id",
+        "parameters": [
+          {
+            "name": "Accept-Encoding",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "gzip, deflate"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "application/json"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Content-Length",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "53"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "*/*"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "sandbox.apis.op-palvelut.fi"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "User-Agent",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "python-requests/2.23.0"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Connection",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "keep-alive"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "ZoStul8nNuwq1SYCzSrLcO1wAj4Tyf7x"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "x-authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "6c18c234b1b18b1d97c7043e2e41135c293d0da9"
+                  ],
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "required": [
+                      "paymentId"
+                    ],
+                    "properties": {
+                      "paymentId": {
+                        "enum": [
+                          "28291040-8920-11ea-9b38-adbba4c22bc0"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              }
+            }
+          },
+          "description": "Response description"
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://sandbox.apis.op-palvelut.fi"
+    }
+  ]
+}
