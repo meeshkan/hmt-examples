@@ -11,6 +11,7 @@ This repository contains the source code for our article: [How to create a sandb
     * [Installation](#installation)
     * [Starting the mock server](#starting-the-mock-server)
     * [Running the tests](#running-the-tests)
+    * [Building the specification yourself](#building-the-specification-yourself)
 * [Mentioned resources](#mentioned-resources)
 * [Contributing](#contributing)
 * [Tell us what you think](#tell-us-what-you-think)
@@ -49,7 +50,7 @@ Run the following command to spin up your mock OP Bank server:
 hmt mock ./specs/ --callback-dir ./callbacks/
 ```
 
-> This command will use the OpenAPI specification located in the `specs` directory and the custom callbacks in the `callbacks` directory to create a mock server with HMT.
+> This command will use the default OpenAPI specification located in the `specs` directory and the custom callbacks in the `callbacks` directory to create a mock server with HMT. Alternatively, you can [build the specification yourself](#building-the-specification-yourself).
 
 Keep this running because you'll need it to execute the tests.
 
@@ -59,6 +60,34 @@ With your mock server running in another terminal window, you can run the tests 
 ```bash
 pytest
 ```
+
+### Building the specification yourself
+
+To build your own specification, you first need to obtain recordings from the proxy. This can be done with the following HMT command:
+
+```bash
+hmt record
+```
+
+Keep that running. Then, in another terminal window, run:
+
+```bash
+python opbank_rec.py
+```
+
+> The `opbank_rec.py` file contains a script making various calls to the OP Bank API. You can modify this to change the outcome of your recordings. 
+
+Once the recordings are complete, stop HMT without losing any of your data with `Ctrl + C` or another `kill` command.
+
+Finally, build the specification using HMT:
+
+```bash
+hmt build --input-file ./logs/your-file-name.jsonl
+```
+
+> The input file will be the [JSONL](http://jsonlines.org/) recordings located in your `logs` directory. For reference, the current example in this repository is called `sandbox.apis.op-palvelut.fi-recordings.jsonl`.
+
+This command will create a new `openapi.json` file in your `specs` directory. You can then use that to [start the mock server](#starting-the-mock-server).
 
 ## Mentioned resources
 
