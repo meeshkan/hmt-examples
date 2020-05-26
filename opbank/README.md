@@ -108,5 +108,5 @@ At [Meeshkan](https://meeshkan.com/), we're working to improve how people test t
 
 Here are some ways you can get in touch:
 - [Open an issue](https://github.com/meeshkan/hmt-examples/issues)
-- [Tweet at us](https://twitter.com/meeshkanml)
+- [Tweet at us](https://twitter.com/meeshkan)
 - [Reach out on Gitter](https://gitter.im/Meeshkan/community)
